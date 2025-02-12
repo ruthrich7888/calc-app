@@ -25,15 +25,15 @@ const TipCalculator = () => {
         <h1>T T E R</h1>
       </div>
 
-      <div className="card d-flex flex-col flex-lg-row justify-content-between align-items-lg-center mx-auto p-4 calculator gap-lg-5">
-        <div className="w-100">
+      <div className="card d-flex flex-col flex-lg-row mx-auto p-4 calculator gap-4 ">
+        <div className="w-lg-50">
           <div className="mb-3">
             <label className="mb-2">Bill</label>
             <div className="dollscontainer ">
               <img className="dolls" src={dollaricon} alt="" />
               <input
                 type="number"
-                className="text-end rounded-2 w-100 fs-2"
+                className="text-end rounded-2 fs-2 w-100"
                 value={bill}
                 onChange={(e) => setBill(e.target.value) || 0}
               />
@@ -54,7 +54,7 @@ const TipCalculator = () => {
               <input
                 type="number"
                 placeholder="Custom"
-                className="mt-2 p-3 custom rounded-2 text-end fs-2"
+                className="mt-2 p-3 custom rounded-2 text-end fs-4"
                 value={tipPercentage}
                 onChange={(e) => setTipPercentage(e.target.value)}
               />
@@ -62,7 +62,7 @@ const TipCalculator = () => {
           </div>
 
           <div>
-            <div className="d-flex justify-content-between align-items-center mt-3">
+            <div className="d-flex align-items-center justify-content-between mt-3">
               <label className="numofpeople">Number of People</label>
               {people === "0" && (
                 <p className="errormsg text-end mt-3">Can't be zero</p>
@@ -72,7 +72,7 @@ const TipCalculator = () => {
               <img className="person" src={personicon} alt="" />
               <input
                 type="number"
-                className={`text-end w-100 rounded-2 fs-2 ${
+                className={`w-100 text-end rounded-2 fs-2 ${
                   people === "0" ? "border-2" : "border-0"
                 }`}
                 value={people}
@@ -82,16 +82,16 @@ const TipCalculator = () => {
           </div>
         </div>
 
-        <div className="perpersoncard rounded-3 py-4 px-3 mt-3">
+        <div className="perpersoncard rounded-3 py-4 px-3 w-lg-50 mt-3">
           <div className="">
-            <div className="d-flex align-items-center justify-content-between">
+            <div className="d-flex justify-content-between gap-5">
               <div className="d-flex flex-column">
                 <span className="text text-white">Tip Amount</span>
                 <span className="subtext">/ person</span>
               </div>
               <div className="amount">{tipAmount.toFixed(2)}</div>
             </div>
-            <div className="d-flex align-items-center justify-content-between mt-3 mb-5">
+            <div className="d-flex justify-content-between mt-3 mb-5">
               <div className="d-flex flex-column">
                 <span className="text text-white">Total</span>
                 <span className="subtext">/ person</span>
@@ -100,7 +100,7 @@ const TipCalculator = () => {
             </div>
           </div>
           <div>
-            <button onClick={handleReset} className="resetbtn border-0 w-100">
+            <button onClick={handleReset} className="resetbtn border-0 w-100 mt-5">
               RESET
             </button>
           </div>
