@@ -33,7 +33,7 @@ const TipCalculator = () => {
               <img className="dolls" src={dollaricon} alt="" />
               <input
                 type="number"
-                className="text-end rounded-2 fs-2"
+                className="text-end rounded-2 w-100 fs-2"
                 value={bill}
                 onChange={(e) => setBill(e.target.value) || 0}
               />
@@ -42,25 +42,22 @@ const TipCalculator = () => {
 
           <div className="">
             <label className="form-label">Select Tip %</label>
-            <div className="container row">
-              <div className="col">
-                {[5, 10, 15, 25, 50].map((tip) => (
-                  <TipButton
-                    key={tip}
-                    percentage={tip}
-                    isSelected={tip === tipPercentage}
-                    onClick={() => setTipPercentage(tip)}
-                  />
-                ))}
-
-                <input
-                  type="number"
-                  placeholder="Custom"
-                  className="p-3 col custom rounded-2 text-end fs-2"
-                  value={tipPercentage}
-                  onChange={(e) => setTipPercentage(e.target.value)}
+            <div className="selecttip">
+              {[5, 10, 15, 25, 50].map((tip) => (
+                <TipButton
+                  key={tip}
+                  percentage={tip}
+                  isSelected={tip === tipPercentage}
+                  onClick={() => setTipPercentage(tip)}
                 />
-              </div>
+              ))}
+              <input
+                type="number"
+                placeholder="Custom"
+                className="mt-2 p-3 custom rounded-2 text-end fs-2"
+                value={tipPercentage}
+                onChange={(e) => setTipPercentage(e.target.value)}
+              />
             </div>
           </div>
 
@@ -75,7 +72,7 @@ const TipCalculator = () => {
               <img className="person" src={personicon} alt="" />
               <input
                 type="number"
-                className={`text-end rounded-2 fs-2 ${
+                className={`text-end w-100 rounded-2 fs-2 ${
                   people === "0" ? "border-2" : "border-0"
                 }`}
                 value={people}
