@@ -54,15 +54,16 @@ input::placeholder {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  max-width: 500px;
-  line-height: 51px;
+  gap: 8px;
+  max-width: 800px;
+
+  line-height: 50px;
 }
 @media (max-width: 768px) {
   .selecttip {
+    max-width: 600px;
     grid-template-columns: repeat(2, 1fr);
   }
-  
 }
 
 .dolls {
@@ -70,13 +71,16 @@ input::placeholder {
   top: 10px;
   left: 15px;
 }
-.select {
-  padding: 5px;
-}
 
 .calculator {
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.zamo {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .result-section {
@@ -104,7 +108,7 @@ input::placeholder {
   top: 10px;
   left: 15px;
 }
-.perpersoncard {
+.perperson2 {
   background-color: var(--Verydarkcyan);
 }
 
@@ -114,6 +118,7 @@ input::placeholder {
   border: none;
   border-radius: 5px;
   font-size: 24px;
+  margin-top: 80px;
 }
 .resetbtn:hover {
   background-color: var(--Lightgrayishcyan);
@@ -144,7 +149,7 @@ input::placeholder {
 }
 
 .amount {
-  font-size: 24px;
+  font-size: 39px;
   color: var(--Strongcyan);
 }
 .text {

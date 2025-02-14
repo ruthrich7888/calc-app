@@ -25,8 +25,8 @@ const TipCalculator = () => {
         <h1>T T E R</h1>
       </div>
 
-      <div className="card d-flex flex-col flex-lg-row mx-auto p-4 calculator gap-4 ">
-        <div className="w-lg-50">
+      <div className="card zamo d-flex flex-lg-row flex-col justify-conent-between calculator gap-4">
+        <div className="flex-grow-1 p-4">
           <div className="mb-3">
             <label className="mb-2">Bill</label>
             <div className="dollscontainer ">
@@ -82,7 +82,7 @@ const TipCalculator = () => {
           </div>
         </div>
 
-        <div className="perpersoncard rounded-3 py-4 px-3 w-lg-50 mt-3">
+        <div className="perperson2 zamo rounded-3 ">
           <div className="">
             <div className="d-flex justify-content-between gap-5">
               <div className="d-flex flex-column">
@@ -100,7 +100,7 @@ const TipCalculator = () => {
             </div>
           </div>
           <div>
-            <button onClick={handleReset} className="resetbtn border-0 w-100 mt-5">
+            <button onClick={handleReset} className="resetbtn border-0 w-100">
               RESET
             </button>
           </div>
